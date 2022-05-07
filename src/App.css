@@ -1,38 +1,70 @@
-.App {
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: green;
+}
+
+main {
+  display: flex;
+}
+
+#winnerAnnoucement {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10000;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  align-self: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#GUI {
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: absolute;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1em;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#rope {
+  display: flex;
+  position: absolute;
+  top: 50vh;
+  width: 100vw;
+  height: 10px;
+  background-color: brown;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+#flag {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid orange;
+  position: relative;
+  bottom: -10px;
+}
+
+#leftGoal,
+#rightGoal {
+  position: relative;
+  background-color: black;
+  width: 10px;
+  height: 100vh;
+}
+
+#leftGoal {
+  left: 10%;
+}
+
+#rightGoal {
+  left: 90%;
 }
